@@ -24,8 +24,8 @@
 					<td></td>
 					<td>{{graph.function}}</td>
 					<td>{% thumbnail graph.graph '300x300' crop='center' upscale=True as im %}
-						<img class='card-img' src='{{ im.url }}' />
-					{% endthumbnail %}</td>
+							<img class='card-img' src='{{ im.url }}' />
+						{% endthumbnail %}</td>
 					<td>{{graph.interval}}</td>
 					<td>{{graph.dt}}</td>
 					<td>{{graph.processing_date}}</td>

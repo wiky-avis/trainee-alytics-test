@@ -7,9 +7,11 @@ from .models import Function
 
 def home(request):
     graph_list = Function.objects.all()
+    form = FunctionForm()
     return render(
         request, 'base.html', {
-            'graph_list': graph_list})
+            'graph_list': graph_list,
+            'form': form})
 
 
 def new_graph(request):
@@ -19,4 +21,4 @@ def new_graph(request):
         graph.graph = get_graph()
         graph.save()
         return redirect('home')
-    return render(request, 'new_graph.html', {'form': form})
+    return render(request, 'includes/new_graph.html', {'form': form})
