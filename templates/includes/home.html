@@ -1,0 +1,37 @@
+{% load thumbnail %}
+<div class="card-box mb-30">
+	<div class="pd-20">
+	</div>
+	<div class="pb-20">
+		<table class="checkbox-datatable table nowrap">
+			<thead>
+				<tr>
+					<th><div class="dt-checkbox">
+							<input type="checkbox" name="select_all" value="1" id="example-select-all">
+							<span class="dt-checkbox-label"></span>
+						</div>
+					</th>
+					<th>Функция</th>
+					<th>График</th>
+					<th>Интревал t, дней</th>
+					<th>Шаг t, часы</th>
+					<th>Дата обработки</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for graph in graph_list %}
+				<tr>
+					<td></td>
+					<td>{{graph.function}}</td>
+					<td>{% thumbnail graph.graph '300x300' crop='center' upscale=True as im %}
+						<img class='card-img' src='{{ im.url }}' />
+					{% endthumbnail %}</td>
+					<td>{{graph.interval}}</td>
+					<td>{{graph.dt}}</td>
+					<td>{{graph.processing_date}}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>

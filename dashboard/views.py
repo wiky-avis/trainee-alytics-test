@@ -8,7 +8,7 @@ from .models import Function
 def home(request):
     graph_list = Function.objects.all()
     return render(
-        request, 'home.html', {
+        request, 'base.html', {
             'graph_list': graph_list})
 
 
