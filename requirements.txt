@@ -1,0 +1,6 @@
+Django
+Pillow
+gunicorn
+psycopg2-binary
+matplotlib
+sorl-thumbnail
