@@ -37,7 +37,7 @@ def get_graph():
     points = [(x, y, 'g^'), (u, v, 'ro')]
     graph = graph_create(points, title, xlabel, ylabel)
     img = SimpleUploadedFile(
-        name='graph.png',
+        name='media/graphs/graph.png',
         content=graph,
         content_type='image/png'
         )

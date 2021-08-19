@@ -25,7 +25,6 @@ INSTALLED_APPS = [
 
     'dashboard',
 
-    'django_matplotlib',
     'sorl.thumbnail',
 ]
 
